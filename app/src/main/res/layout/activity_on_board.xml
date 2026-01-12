@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OnBoardActivity"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/textSkip"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_28sdp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Skip"
+        android:textAlignment="textEnd"
+        android:layout_gravity="end"
+        android:textColor="@color/white_dark"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerOnBoarding"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintTop_toBottomOf="@+id/textSkip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:id="@+id/dotIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_250sdp"
+        app:dotsColor="@color/grey"
+        app:dotsSize="@dimen/_8sdp"
+        app:selectedDotColor="@color/white_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSkip"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonOnBoarding"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:text="Next"
+        android:textColor="@color/white_dark"
+        android:textSize="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_28sdp"
+        android:background="@drawable/rectangular_background_setting"
+        android:fontFamily="@font/nunito_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dotIndicator"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

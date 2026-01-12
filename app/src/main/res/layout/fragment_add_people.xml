@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPeopleFragment"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:id="@+id/layoutSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_22sdp"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:background="@drawable/rectangular_background"
+        android:backgroundTint="@color/white_dark"
+        android:elevation="@dimen/_15sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ImageViewSearchIcon"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/search" />
+
+        <EditText
+            android:id="@+id/textInputSearch"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:fontFamily="@font/nunito_bold"
+            android:hint="Enter 5 Digit User ID"
+            android:imeOptions="actionSearch"
+            android:importantForAutofill="no"
+            android:includeFontPadding="false"
+            android:inputType="text"
+            android:maxLength="5"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/_13sdp" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSearch"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="Search"
+        android:elevation="@dimen/_8sdp"
+        android:textColor="@color/grey"
+        android:fontFamily="@font/nunito_bold"
+        android:backgroundTint="@color/white_dark"
+        android:background="@drawable/rectangular_background_setting"
+        app:layout_constraintEnd_toEndOf="@+id/layoutSearch"
+        app:layout_constraintTop_toBottomOf="@+id/layoutSearch" />
+
+    <TextView
+        android:id="@+id/textUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="User Found:"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSearch" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@drawable/rectangular_background_setting"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Add To Split"
+        android:visibility="gone"
+        android:padding="@dimen/_8sdp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textUserName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

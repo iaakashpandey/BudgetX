@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_250sdp"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/black">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select From"
+        android:fontFamily="@font/nunito_extra_bold"
+        android:textColor="@color/white_dark"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutCash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/imageCash"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/cash" />
+
+        <TextView
+            android:id="@+id/textCash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Cash"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/white_dark"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutBank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/imageBank"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/bank" />
+
+        <TextView
+            android:id="@+id/textBank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Bank"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/white_dark"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Other Option -->
+    <LinearLayout
+        android:id="@+id/layoutOther"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/imageOther"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/other" />
+
+        <TextView
+            android:id="@+id/textOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Other"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/white_dark"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

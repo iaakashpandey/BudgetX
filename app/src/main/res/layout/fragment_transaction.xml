@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".TransactionFragment">
+
+    <!-- Undo Layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutUndo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:elevation="@dimen/_24sdp"
+        android:hapticFeedbackEnabled="true"
+        android:visibility="gone"
+        android:background="@drawable/rectangular_background_setting"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageUndo"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:src="@drawable/undo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textUndoMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="Transaction deleted"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageUndo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textUndoBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/nunito_semi_bold"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="Tap to Undo"
+            android:textColor="@color/grey"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textUndoMessage"
+            app:layout_constraintStart_toEndOf="@+id/imageUndo"
+            app:layout_constraintTop_toBottomOf="@+id/textUndoMessage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:id="@+id/layoutSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_36sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@drawable/rectangular_background"
+        android:backgroundTint="@color/dark_grey"
+        android:elevation="@dimen/_15sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_10sdp"
+       app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/ImageViewSearchIcon"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/search" />
+
+        <EditText
+            android:id="@+id/textInputSearch"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:background="@null"
+            android:fontFamily="@font/nunito_bold"
+            android:hint="Search Transactions..."
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:includeFontPadding="false"
+            android:inputType="text"
+            android:textColor="@color/white_dark"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/_13sdp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- Filter Section -->
+    <TextView
+        android:id="@+id/textFilterBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_26sdp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Filter By"
+        android:textColor="@color/white_dark"
+        android:textSize="@dimen/_22sdp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/layoutSearch"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginHorizontal="@dimen/_26sdp"
+        app:chipSpacingHorizontal="@dimen/_20sdp"
+        app:checkedChip="@id/chipAll"
+        app:singleSelection="true"
+        app:selectionRequired="true"
+        app:layout_constraintTop_toBottomOf="@id/textFilterBy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipIncome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Income"
+            android:checkable="true"
+            style="@style/UnselectedChipStyle"
+            android:fontFamily="@font/nunito_bold"
+            android:padding="@dimen/_8sdp"
+             />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expense"
+            android:checkable="true"
+            style="@style/UnselectedChipStyle"
+            android:fontFamily="@font/nunito_bold"
+            android:padding="@dimen/_8sdp"
+             />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All"
+            android:checkable="true"
+            style="@style/SelectedChipStyle"
+            android:fontFamily="@font/nunito_bold"
+            android:padding="@dimen/_8sdp"
+             />
+    </com.google.android.material.chip.ChipGroup>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTransactionFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/chipGroupFilter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/transaction_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

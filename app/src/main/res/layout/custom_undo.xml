@@ -1,0 +1,54 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/rectangular_background_setting"
+    android:padding="8dp"
+    android:elevation="4dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="16dp"
+    android:id="@+id/layoutUndo"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/imageUndo"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:src="@drawable/undo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/textUndoMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_4sdp"
+        android:layout_weight="1"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Transaction deleted"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageUndo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textUndoBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/nunito_semi_bold"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Tap to Undo"
+        android:textColor="@color/grey"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textUndoMessage"
+        app:layout_constraintStart_toEndOf="@+id/imageUndo"
+        app:layout_constraintTop_toBottomOf="@+id/textUndoMessage" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:defaultNavHost = "true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layoutBottomNavigation"/>
+
+<LinearLayout
+    android:id="@+id/layoutBottomNavigation"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_48sdp"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:background="@color/black"
+    android:gravity="center_horizontal"
+    android:elevation="@dimen/_10sdp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/_20sdp">
+
+        <ImageView
+            android:id="@+id/imageHome"
+            android:layout_width="@dimen/_62sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:src="@drawable/home"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/grey"
+            app:tint="@color/grey" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imageTransaction"
+            android:layout_width="@dimen/_62sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:src="@drawable/arrows"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            app:tint="@color/grey"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imageSplit"
+            android:layout_width="@dimen/_62sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:src="@drawable/split_friends"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            app:tint="@color/grey"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imageGraph"
+            android:layout_width="@dimen/_62sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:src="@drawable/pie"
+            app:tint="@color/grey"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/_20sdp" >
+
+        <ImageView
+            android:id="@+id/imageSetting"
+            android:layout_width="@dimen/_62sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:src="@drawable/user"
+            app:tint="@color/grey"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

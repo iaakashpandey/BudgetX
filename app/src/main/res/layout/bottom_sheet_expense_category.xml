@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_280sdp"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/black">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Expense Category"
+        android:textAlignment="center"
+        android:fontFamily="@font/nunito_extra_bold"
+        android:textColor="@color/white_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <!-- Food Option -->
+    <LinearLayout
+        android:id="@+id/layoutFood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/food"
+            android:contentDescription="Food Icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Food"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/white_dark"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Rent Option -->
+    <LinearLayout
+        android:id="@+id/layoutRent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/rent"
+            android:contentDescription="Rent Icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Rent"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/white_dark"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Travel Option -->
+    <LinearLayout
+        android:id="@+id/layoutTravel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/travel"
+            android:contentDescription="Travel Icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Travel"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/white_dark"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Other Option -->
+    <LinearLayout
+        android:id="@+id/layoutOther"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/imageOther"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/other" />
+
+        <TextView
+            android:id="@+id/textOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Other"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/white_dark"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

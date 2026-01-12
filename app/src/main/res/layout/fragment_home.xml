@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment"
+    android:background="@color/black">
+
+    <ScrollView
+        android:id="@+id/scrollViewHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:text="hey,"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="@color/white_dark"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:text="Welcome back"
+                android:fontFamily="@font/nunito_bold"
+                android:textColor="@color/white_dark"
+                android:textSize="@dimen/_18ssp"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutCard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_136sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_12ssp"
+        android:background="@drawable/rectangular_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:id="@+id/textTotalBalance"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:text="Total Balance"
+            android:fontFamily="@font/nunito_semi_bold"
+            android:textAlignment="center"
+            android:textColor="@color/white_dark"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/textTotalAmount"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0.00"
+            android:maxLines="1"
+            android:fontFamily="@font/nunito_extra_bold"
+            android:textColor="@color/white_dark"
+            android:textSize="@dimen/_36ssp"
+            app:layout_constraintEnd_toEndOf="@+id/textTotalBalance"
+            app:layout_constraintStart_toStartOf="@+id/textTotalBalance"
+            app:layout_constraintTop_toBottomOf="@+id/textTotalBalance" />
+
+        <TextView
+            android:id="@+id/textTotalIncome"
+            android:layout_width="@dimen/_68sdp"
+            android:layout_height="wrap_content"
+            android:text="Income"
+            android:fontFamily="@font/nunito_semi_bold"
+            android:textAlignment="center"
+            android:textColor="@color/white_dark"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintTop_toBottomOf="@+id/textTotalAmount"
+            app:layout_constraintStart_toStartOf="@+id/textTotalBalance" />
+
+        <TextView
+            android:id="@+id/textTotalIncomeAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_22ssp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:text="0.00"
+            android:fontFamily="@font/nunito_extra_bold"
+            android:gravity="center"
+            android:textColor="@color/light_green"
+            android:textSize="@dimen/_24ssp"
+            android:maxLines="1"
+            app:layout_constraintTop_toBottomOf="@+id/textTotalIncome"
+            app:layout_constraintEnd_toEndOf="@+id/textTotalIncome"
+             />
+
+        <TextView
+            android:id="@+id/textTotalExpense"
+            android:layout_width="@dimen/_68sdp"
+            android:layout_height="wrap_content"
+            android:text="Expense"
+            android:fontFamily="@font/nunito_semi_bold"
+            android:textAlignment="center"
+            android:textColor="@color/white_dark"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="@+id/textTotalBalance"
+            app:layout_constraintTop_toBottomOf="@+id/textTotalAmount" />
+
+        <TextView
+            android:id="@+id/textTotalExpenseAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:gravity="center"
+            android:text="0.00"
+            android:fontFamily="@font/nunito_extra_bold"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_24ssp"
+            app:layout_constraintStart_toEndOf="@+id/textTotalIncome"
+            app:layout_constraintTop_toBottomOf="@+id/textTotalExpense" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textLastTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginHorizontal="@dimen/_24sdp"
+                android:text="Last Transactions"
+                android:textSize="@dimen/_18ssp"
+                android:fontFamily="@font/nunito_bold"
+                android:textColor="@color/white_dark"
+                app:layout_constraintTop_toBottomOf="@+id/layoutCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginHorizontal="@dimen/_24sdp"
+                android:background="@color/grey"
+                app:layout_constraintTop_toBottomOf="@+id/textLastTransaction"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homeRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            tools:listitem="@layout/transaction_item"
+            app:layout_constraintTop_toBottomOf="@id/textLastTransaction"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/textNextFragment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:layout_marginHorizontal="@dimen/_24sdp"
+                android:text="To see more transactions click here..."
+                android:textAlignment="center"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/white_dark"
+                android:visibility="gone"
+                android:fontFamily="@font/nunito_semi_bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/homeRecyclerView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutUndo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:visibility="gone"
+        android:elevation="@dimen/_24sdp"
+        android:background="@drawable/rectangular_background_setting"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    <ImageView
+        android:id="@+id/imageUndo"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_marginVertical="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:src="@drawable/undo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/textUndoMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_weight="1"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Transaction deleted"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageUndo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textUndoBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/nunito_semi_bold"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Tap to Undo"
+        android:textColor="@color/grey"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textUndoMessage"
+        app:layout_constraintStart_toEndOf="@+id/imageUndo"
+        app:layout_constraintTop_toBottomOf="@+id/textUndoMessage" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageFAB"
+        android:layout_width="@dimen/_68sdp"
+        android:layout_height="@dimen/_68sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:elevation="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:src="@drawable/plus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
